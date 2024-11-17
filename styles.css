@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Input area styling */
+#input-text {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#input-text:focus {
+    border-color: #4C6EF5;
+    box-shadow: 0 0 10px rgba(76, 110, 245, 0.3);
+}
+
+/* Button Styling */
+button {
+    background-color: #4C6EF5;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3b57cc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #2e44a2;
+    transform: translateY(0);
+}
+
+/* Output area styling */
+#summarized-text {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    outline: none;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+/* Loader Styling */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #4C6EF5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Animation for loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #input-text, #summarized-text {
+        height: 120px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
